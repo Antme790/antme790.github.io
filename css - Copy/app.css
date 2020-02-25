@@ -49,7 +49,7 @@ body  {
 }
 
 #wrapper {
-  padding: 16px 16px 0px 16px;
+  padding: 16px 16px;
   background-color: white;
   margin-top: 0;
   /* -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
@@ -66,7 +66,7 @@ body  {
 
 @media screen and (min-device-width: 1141px) { 
   #wrapper {
-    width: 62.5%;
+    width: 75%;
     margin: 0 auto;
   }
 }
@@ -78,6 +78,7 @@ body  {
 
 header {
     position: sticky;
+    /* position: relative; */
     width: 100vw;
     max-width: 100%;
     top: 0;
@@ -89,12 +90,11 @@ header {
 }
 
 .logoSection {
-  background-color: rgba(44, 44, 44, 0.6);
+  background-color: rgba(44, 44, 44, 0.4);
   width: 100vw;
   display: flex;
   justify-content: center;
   padding: 32px 0px;
-  z-index: -2;
 }
 
 .logoSection img {
@@ -127,10 +127,9 @@ nav {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  position: absolute;
+  position: sticky;
   top: 0;
-  /* background-color: rgb(44, 44, 44); */
-  background-color: transparent;
+  background-color: rgb(44, 44, 44);
 }
 
 nav .hamburger {
@@ -167,7 +166,6 @@ nav ul li {
   padding: 64px 64px 32px 64px;
   opacity: 0;
   color: white;
-  height: 100vh;
 }
 
 #contact {
@@ -178,8 +176,7 @@ nav ul li {
 
 #contact a {
   text-decoration: underline;
-  color: rgb(92, 147, 196);
-  font-size: 1em;
+  color: rgb(92, 147, 196)
 }
 
 #contact span{
@@ -205,7 +202,6 @@ nav ul li {
     flex-direction: column;
     justify-content: flex-end; */
     position: relative;
-    /* overflow: hidden; */
 }
 
 .heroInfo {
@@ -213,8 +209,7 @@ nav ul li {
   flex-direction: column;
   justify-content: flex-end;
   position: sticky;
-  top: 37vh;
-  padding-bottom: 56px;
+  top: 70vh;
 }
 
 .heroSection h1 {
@@ -238,13 +233,11 @@ nav ul li {
 }
 
 .bottomGuide {
-    position: absolute;
+    /* position: absolute; */
     bottom: 16px;
     right: 0;
     left: 0;
-    top: 94vh;
     text-align: center;
-    margin-top: 16px;
 }
 
 .heroSection a {
@@ -460,7 +453,7 @@ hr {
 @media screen and (min-device-width: 1141px) {  
   
   .featured {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
   
   .featText:after {
@@ -493,7 +486,7 @@ hr {
   }
   .featText p {
     display: block;
-    font-size: .6em;
+    font-size: .75em;
     line-height: 1.4em;
     /* margin-bottom: 1em; */
     width: 90%;
@@ -510,11 +503,10 @@ hr {
   }
   .featText a {
     color: black;
-    font-size: 0.45em;
   }
   .featText h2 {
     margin-bottom: .25em;
-    font-size: 1.3em;
+    font-size: 1.75em;
   }
   .featText a {
     align-self: flex-start;
@@ -530,7 +522,7 @@ hr {
 .secondCard {
   width: 100%;  
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   font-size: 1em;
   position: relative;
   /* -webkit-box-shadow: 2px 3px 15px 0px rgba(0,0,0,0.1);
@@ -622,27 +614,15 @@ hr {
     .secondary {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
 
     .secondCard {
-      /* width: 50%; */
-      width: calc(50% - 16px)
+      width: 50%;
     }
 
     .secondCard:hover {
       transform: scale(1.01);
       transition: all 200ms;
-    }
-
-    .secondCard:after {
-      content: "";
-      position: absolute;
-      bottom: -18px;
-      right: 0;
-      left: 0;
-      height: 1px;
-      background-color: rgba(187, 187, 187, 1);
     }
 }
 /* =================== */
