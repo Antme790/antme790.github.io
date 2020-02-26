@@ -4,7 +4,7 @@
 
 @media screen and (max-device-width: 720px) {
   html {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -93,12 +93,12 @@ header {
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 32px 0px;
+  padding: 16px 0px;
   z-index: -2;
 }
 
 .logoSection img {
-  max-width: 30%;
+  max-width: 20%;
 }
 
 .logo, .hamburger, .hamburger i {
@@ -242,7 +242,7 @@ nav ul li {
     bottom: 16px;
     right: 0;
     left: 0;
-    top: 94vh;
+    top: 93vh;
     text-align: center;
     margin-top: 16px;
 }
