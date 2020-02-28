@@ -9,9 +9,6 @@ var offset = null;
 var offsetOpacity = null;
 var offsetOutput = "";
 
-// Add attributes to menu(because of DOM Bug?)
-// menu.style.transform = "translateX(100%)";
-
 button.addEventListener("click", function() {
   if(!menu.classList.contains("menuItems-open")) {
     menu.classList.remove("DNONE");
@@ -99,15 +96,19 @@ function scrollOpacity() {
     offsetOpacity = 0.6 + ((0.35/95)*offset);
     // Save final output
     offsetOutput = "rgba(44, 44, 44, " + offsetOpacity + ")"
-    // Apply Output to inline CSS
+    // Apply Output to nav inline CSS
     head.style.backgroundColor = offsetOutput;
 
+    // fade out guide on scroll based on offset
     guide.style.opacity = (50-offset)/100;
+    // Set full opacity if pages is scrolled to top
     if(offset == 0) {
       guide.style.opacity = "1";
     }
     
-    hero.style.opacity = (65-offset)/100;
+    // fade out title text on scroll based on offset
+    hero.style.opacity = (80-offset)/100;
+    // Set full opacity if pages is scrolled to top
     if(offset == 0) {
       hero.style.opacity = "1";
     }
