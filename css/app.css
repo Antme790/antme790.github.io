@@ -268,7 +268,7 @@ nav ul {
 
 .heroInfo {
   text-align: center;
-  margin: 10vh 5vw;
+  margin: 15vh 5vw 0 5vw;
   padding-bottom: 64px;
 }
 
@@ -325,7 +325,7 @@ nav ul {
     left: 0;
     text-align: center;
     margin-top: 16px;
-    display: none;
+    /* display: none; */
 }
 
 .heroSection a {
