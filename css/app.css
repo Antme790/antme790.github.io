@@ -141,7 +141,7 @@ nav .hamburger {
 }
 
 nav ul {
-    font-size: 42px;
+    font-size: 1.5em;
     padding: 16px 0px 0px 0px; 
     list-style-type: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -170,7 +170,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 64px 64px 32px 64px;
+  padding: 1em 1em 32px 1em;
   opacity: 0;
   color: white;
   height: 100vh;
@@ -273,13 +273,13 @@ nav ul {
 }
 
 .heroSection h1 {
-  font-size: 4.5em;
+  font-size: 4em;
   font-weight: 500;
   color: white;
 }
 
 .heroSection h2 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: white;
   font-family: roboto;
   padding-top: 10px;
@@ -314,18 +314,24 @@ nav ul {
   border-radius: 2em;
 }
 
+strong {
+  letter-spacing: .07em;
+}
+
 .premium p, .forFree p {
   margin: 0;
 }
 
 .bottomGuide {
     position: absolute;
+    font-size: .5em;
     bottom: 16px;
     right: 0;
     left: 0;
     text-align: center;
     margin-top: 16px;
     /* display: none; */
+    font
 }
 
 .heroSection a {
@@ -340,26 +346,8 @@ nav ul {
   color: white;
 }
 
-/* @media screen and (max-device-width: 450px) {
-  .heroInfo {
-    font-size: 0.5em;
-  } 
-  .premium, .forFree {
-    font-weight: 300;
-    font-size: 0.6em;
-    padding: 16px 32px;
-    border-radius: 64px;
-  } 
-  .bottomGuide {
-    font-size: 0.4em;
-  } */
-
 @media screen and (max-device-width: 720px) {
   .heroInfo {
-    font-size: 0.8em;
-  }
-
-  .bottomGuide {
     font-size: 0.8em;
   }
 

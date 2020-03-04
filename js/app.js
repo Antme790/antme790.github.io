@@ -93,7 +93,7 @@ function scrollOpacity() {
     // Convert pixel offset from window top to a percentage value
     offset =  Math.round((document.documentElement.scrollTop / window.innerHeight)*100);
     // Multiply the remainder up to target opacity with offset percent
-    offsetOpacity = ((0.95/100)*offset);
+    offsetOpacity = (0.6 + (0.35/100)*offset);
     // Save final output
     offsetOutput = "rgba(44, 44, 44, " + offsetOpacity + ")"
     // Apply Output to nav inline CSS
@@ -103,11 +103,14 @@ function scrollOpacity() {
     guide.style.opacity = (50-offset)/100;
     // Set full opacity if pages is scrolled to top
     if(offset == 0) {
+      head.style.backgroundColor = "rgba(44, 44, 44, 0";
+    }
+    if(offset == 0) {
       guide.style.opacity = "1";
     }
     
     // fade out title text on scroll based on offset
-    hero.style.opacity = (80-offset)/100;
+    hero.style.opacity = (120-offset)/100;
     // Set full opacity if pages is scrolled to top
     if(offset == 0) {
       hero.style.opacity = "1";
