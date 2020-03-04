@@ -3,12 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700|Roboto:300,400,500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>    
+
+    <div id="templates">
+
+        <div class="featCard" id="content-template1">
+            <div class="featImage">
+                <img src="images/TheBroad.jpg" alt="">
+            </div>
+            <div class="featText">
+                <h2>This Broad Has a Real Problem</h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, mollitia! Optio, maxime fugit. Nihil qui, itaque recusandae asperiores dicta ad neque excepturi laborum!</p> 
+                <a href="">Read the full story »</a>
+            </div>
+        </div>
+
+        <div class="secondCard" id="content-template2">
+            <div class="secondImage">
+                <img src="images/nakeddude.jpg" alt="">
+            </div>
+            <div class="secondText" id="secondText">
+                <h3>Is This Guy Naked?!</h3>
+                <a href="">Read More »</a>
+            </div>
+        </div>
+
+        <p id="paragraph1">Since the advent of personal computing, page layout skills have expanded to electronic media as well as print media. E-books, PDF documents, and static web pages mirror paper documents relatively closely, but computers can also add multimedia animation, and interactivity. Page layout for interactive media overlaps with interface design and user experience design; an interactive "page" is better known as a graphical user interface (GUI).</p>
+    </div>
+
+    <div id="buttonpanel">
+        <div id="toggleBtn" onclick="toggleButtons()">🙈</div>
+        <div id="buttons">
+            <div class="container-1">
+                <button onclick='copyTemplate("content-template1", "container1")'>
+                    Add Primary-article
+                </button>
+                <button onclick='addText("paragraph1", "featText")'>
+                    Add text to Primary-article
+                </button>
+                <button onclick='removeLast("container1")'>
+                    Remove last Primary-article
+                </button>
+            </div>
+            <div class="container-2">
+                <button onclick='copyTemplate("content-template2", "container2")'>
+                    Add Secondary-article
+                </button>
+                <button onclick='copyTemplate("paragraph1", "container2")'>
+                    Add text to Secondary-article
+                </button>
+                <button onclick='removeLast("container2")'>
+                    Remove last Secondary-article
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="heroSection">
         <header>
             <nav>
@@ -49,6 +103,14 @@
         <div class="heroInfo">
             <h1>Welcome</h1> 
             <h2>To the most prominent news source in the world.</h2>
+            <div class="action">
+                <a href=""><div class="premium">
+                    <p>Get <strong>Premium</strong></p>
+                </div></a>
+                <a href=""><div class="forFree">
+                    <p>Try for <strong>Free</strong></p>
+                </div></a>
+            </div>
         </div>
         <div class="bottomGuide">
             <div class="scrollLink">
@@ -65,10 +127,10 @@
         <div class="infoSection">
             <div class="infoCard">
                 <div class="infoGraphic">
-                    <img src="images/infographic.svg" alt="">
+                    <img src="images/infographic.png" alt="">
                 </div>
                 <div class="infoText">
-                    <h2 id="relevance">Relevance</h2>
+                    <h2>Relevance</h2>
                     <p>We strive to always bring you the most relevant news the world has to offer</p>
                 </div>
             </div>
@@ -77,7 +139,7 @@
                     <img src="images/Transparency.png" alt="">
                 </div>
                 <div class="infoText">
-                    <h2 id="transparency">Transparency</h2>
+                    <h2>Transparency</h2>
                     <p>It is important to us that you feel safe reading our news knowing you can always locate the source</p>
                 </div>
             </div>
@@ -103,7 +165,7 @@
 
         <hr>
 
-        <div class="featured">
+        <div class="featured" id="container1">
             <div class="featCard">
                 <div class="featImage">
                     <img src="images/TheBroad.jpg" alt="">
@@ -126,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div class="secondary">
+        <div class="secondary" id="container2">
             <div class="secondCard">
                 <div class="secondImage">
                     <img src="images/nakeddude.jpg" alt="">
@@ -137,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="secondCard">
+            <div class="secondCard" >
                 <div class="secondImage">
                     <img src="images/nakeddude.jpg" alt="">
                 </div>
@@ -184,5 +246,6 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/projtemplate.js"></script>
 </body>
 </html>
