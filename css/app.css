@@ -1,3 +1,17 @@
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 /* =================== */
 /* MONKEY BUTTONS */
 /* =================== */
@@ -207,7 +221,7 @@ nav ul {
 
   .logo {
     height: 10vh;
-    padding: 0px 32px;
+    padding: 0px 1em;
     display: flex;
     justify-content: space-evenly;
   }
@@ -216,7 +230,7 @@ nav ul {
     display: flex;
     color: white;
     justify-content: space-evenly;
-    font-size: 1.4em;
+    font-size: .8em;
     padding: 0;
   }
 
@@ -331,7 +345,6 @@ strong {
     text-align: center;
     margin-top: 16px;
     /* display: none; */
-    font
 }
 
 .heroSection a {
@@ -369,6 +382,7 @@ strong {
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
+  height: 100vh;
 }
 
 .infoRow {
@@ -383,27 +397,25 @@ strong {
   align-items: center;
   width: 50%;
   max-width: 50%;
-  padding: 0px 8px;
   text-align: center;
   line-height: 1.5em;
 }
 
 .infoText {
-    width: 80%;
+    width: 100%;
 }
 
 .infoText p {
-  font-size: 0.9em;
+  font-size: 0.8em;
+  margin: .25em;
 }
 
 .infoText h2 {
   font-size: 1.4em;
-  margin-bottom: 16px;
 }
 
 .infoGraphic {
-  width: 20vw;
-  margin: 0px 0px 16px 0px;
+  width: 25vw;
 }
 
 .infoGraphic img {
@@ -419,17 +431,10 @@ hr {
   background-color: rgba(187, 187, 187, 1);
 }
 
-@media screen and (max-device-width: 720px) { 
-  .infoSection {
-    height: 97vh;
-  }
-}
-
 @media screen and (min-device-width: 721px) and (max-device-width: 1140px) { 
   .infoSection {
     width: 83%;
     margin: 0 auto;
-    height: 99vh;
   }
 }
 
@@ -438,6 +443,7 @@ hr {
     width: 100%;
     flex-direction: row;
     margin: 16px 0;
+    height: auto;
   }
 
   .infoRow {
@@ -648,7 +654,7 @@ hr {
   }
   .featText h2 {
     margin: 0 0 .25em 0;
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   .featText a {
     align-self: flex-start;
@@ -693,7 +699,7 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  font-size: 1.4em;
+  /* font-size: 1.4em; */
 }
 
 .secondText p {
