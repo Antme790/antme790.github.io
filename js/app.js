@@ -93,7 +93,7 @@ function scrollOpacity() {
     // Convert pixel offset from window top to a percentage value
     offset =  Math.round((document.documentElement.scrollTop / window.innerHeight)*100);
     // Multiply the remainder up to target opacity with offset percent
-    offsetOpacity = (0.6 + (0.35/100)*offset);
+    offsetOpacity = ((0.95/100)*offset);
     // Save final output
     offsetOutput = "rgba(44, 44, 44, " + offsetOpacity + ")"
     // Apply Output to nav inline CSS

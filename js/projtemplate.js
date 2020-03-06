@@ -19,7 +19,13 @@ function addText(templateId, targetContainerClass) {
     var newElement = document.createElement(templateElement.tagName);
     newElement.setAttribute("class", templateElement.getAttribute("class"));
     newElement.innerHTML = templateElement.innerHTML;
-    targetContainer[i].innerHTML = ( targetContainer[i].innerHTML + templateElement.innerHTML);
+    var allTheText = targetContainer[i].innerHTML + " " + templateElement.innerHTML;
+    if(allTheText.length > 291) {
+      var clippedText = allTheText.substring(0, 290);  
+      targetContainer[i].innerHTML = (clippedText + "...");
+    } else {
+      targetContainer[i].innerHTML = targetContainer[i].innerHTML + templateElement.innerHTML;
+    }
   }
 }
 
