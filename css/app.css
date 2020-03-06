@@ -28,7 +28,6 @@ html {
   align-items: start;
   bottom: 16px;
   left: 16px;
-  max-width: 50vw;
   min-width: 16px;
   min-height: 16px;
   padding: 3px;
@@ -319,7 +318,7 @@ nav ul {
 
 .premium {
   background-color: rgb(65, 79, 113);
-  margin-right: 5vw;
+  margin-right: 2em;
 }
 
 .forFree {
