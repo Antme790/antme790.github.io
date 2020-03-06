@@ -10,16 +10,16 @@ function copyTemplate(templateId, targetContainerId) {
 }
 
 function addText(templateId, targetContainerClass) {
-  var containerConcat = "." + targetContainerClass;
+  // var containerConcat = "." + targetContainerClass;
 
   var templateElement = document.getElementById(templateId); 
-  var targetContainer = document.querySelectorAll(containerConcat);
+  var targetContainer = document.querySelectorAll(targetContainerClass);
 
-  for(var i = 0; i < targetContainer.length; i++) {
+  for(var i = 1; i < targetContainer.length; i++) {
     var newElement = document.createElement(templateElement.tagName);
     newElement.setAttribute("class", templateElement.getAttribute("class"));
     newElement.innerHTML = templateElement.innerHTML;
-    targetContainer[i].appendChild(newElement);
+    targetContainer[i].innerHTML = ( targetContainer[i].innerHTML + templateElement.innerHTML);
   }
 }
 
